@@ -2,7 +2,7 @@
 //  Counter.h
 //  Counter
 //
-//  Created by Cory Alder on 2015-06-15.
+//  Created by Cory Alder on 2015-08-10.
 //  Copyright (c) 2015 Cory Alder. All rights reserved.
 //
 
@@ -10,11 +10,9 @@
 
 @interface Counter : NSObject
 
-
-@property (nonatomic, readonly) int count;
-
-@property (nonatomic, readonly) int increments;
-@property (nonatomic, readonly) int decrements;
+@property (nonatomic, assign, readonly) int count;
+@property (nonatomic, assign, readonly) int incrementCount;
+@property (nonatomic, assign, readonly) int decrementCount;
 
 -(void)increment;
 -(void)decrement;

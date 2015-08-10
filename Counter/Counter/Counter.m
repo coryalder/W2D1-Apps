@@ -2,7 +2,7 @@
 //  Counter.m
 //  Counter
 //
-//  Created by Cory Alder on 2015-06-15.
+//  Created by Cory Alder on 2015-08-10.
 //  Copyright (c) 2015 Cory Alder. All rights reserved.
 //
 
@@ -12,13 +12,14 @@
 
 
 -(void)increment {
-    _increments++;
     _count++;
+    _incrementCount++;
 }
 
+
 -(void)decrement {
-    _decrements++;
     _count--;
+    _decrementCount++;
 }
 
 @end

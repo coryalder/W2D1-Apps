@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  Counter
 //
-//  Created by Cory Alder on 2015-06-15.
+//  Created by Cory Alder on 2015-08-10.
 //  Copyright (c) 2015 Cory Alder. All rights reserved.
 //
 
@@ -40,6 +40,11 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+
+
 }
 
 @end

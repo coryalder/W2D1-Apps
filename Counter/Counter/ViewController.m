@@ -2,7 +2,7 @@
 //  ViewController.m
 //  Counter
 //
-//  Created by Cory Alder on 2015-06-15.
+//  Created by Cory Alder on 2015-08-10.
 //  Copyright (c) 2015 Cory Alder. All rights reserved.
 //
 
@@ -11,12 +11,14 @@
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *counterLabel;
 
-@property (strong, nonatomic) Counter *counter;
+@property (nonatomic, strong) Counter *counter;
 
-@property (weak, nonatomic) IBOutlet UILabel *decrementLabel;
+@property (weak, nonatomic) IBOutlet UILabel *countLabel;
+
 @property (weak, nonatomic) IBOutlet UILabel *incLabel;
+@property (weak, nonatomic) IBOutlet UILabel *decLabel;
+
 
 @end
 
@@ -24,45 +26,41 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    //self.count = 10;
     
     self.counter = [[Counter alloc] init];
     
     [self refreshView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)decrementAction:(id)sender {
+    
+    [self.counter decrement];
+    
+    
+    //    NSLog(@"dec pressed");
+    [self refreshView];
 }
-
 
 - (IBAction)incrementAction:(id)sender {
+    
     [self.counter increment];
-    [self refreshView];
-}
-
-
-
-- (IBAction)decrementAction:(id)sender {
-    [self.counter decrement];
-    [self refreshView];
-}
-
-- (IBAction)unattachedAction:(id)sender {
-    [self.counter decrement];
+    
+    
+//    NSLog(@"inc pressed");
     [self refreshView];
 }
 
 -(void)refreshView {
-    self.counterLabel.text = [NSString stringWithFormat:@"Count is %i", self.counter.count];
     
-    self.decrementLabel.text = [NSString stringWithFormat:@"%i", self.counter.decrements];
+    self.countLabel.text = [NSString stringWithFormat:@"Count : %i", self.counter.count];
     
-    self.incLabel.text = [NSString stringWithFormat:@"%i", self.counter.increments];
+    self.decLabel.text = [NSString stringWithFormat:@"%i", self.counter.decrementCount];
     
-}
+    self.incLabel.text = [NSString stringWithFormat:@"%i", self.counter.incrementCount];
 
+}
 
 
 @end

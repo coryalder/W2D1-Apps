@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TouchableView.h
 //  Views
 //
 //  Created by Cory Alder on 2015-08-10.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface TouchableView : UIView
 
 @end
-

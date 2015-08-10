@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  Counter
 //
-//  Created by Cory Alder on 2015-06-15.
+//  Created by Cory Alder on 2015-08-10.
 //  Copyright (c) 2015 Cory Alder. All rights reserved.
 //
 
